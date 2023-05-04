@@ -1,3 +1,7 @@
+<script>
+	import { projects, educations, skills } from "$lib/data/data.js";
+</script>
+
 <div class="sm:px-8 mt-16 md:mt-16">
 	<div class="mx-auto max-w-7xl lg:px-8">
 		<div class="relative px-4 sm:px-8 lg:px-12">
@@ -10,6 +14,7 @@
 				<div class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
 
 					<div class="flex flex-col gap-16">
+						{#each projects as project, index (project.id)}
 						<article class="group relative flex flex-col items-start">
 							<h2
 								class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100"
@@ -17,137 +22,60 @@
 								<div
 									class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"
 								/>
-								<a href="/articles/crafting-a-design-system-for-a-multiplanetary-future"
+								{#if project.link != ""}
+								<a href="{project.link}"
 									><span
 										class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
 									/><span class="relative z-10"
-										>Crafting a design system for a multiplanetary future</span
+										>{project.about}</span
 									></a
 								>
+								{:else}
+								<span
+									class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
+								/><span class="relative z-10"
+									>{project.about}</span
+								>
+								{/if}
 							</h2>
-							<time
-								class="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5"
-								datetime="2022-09-05"
-								><span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true"
-									><span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" /></span
-								>September 5, 2022</time
-							>
+							<span class="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5">
+								<span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+									<span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" /></span>
+									{project.type}
+							</span>
 							<p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-								Most companies try to stay ahead of the curve when it comes to visual design,
-								but for Planetaria we needed to create a brand that would still inspire us 100
-								years from now when humanity has spread across our entire solar system.
+								{project.description}
 							</p>
 							<div
 								aria-hidden="true"
 								class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
 							>
-								Read article<svg
-									viewBox="0 0 16 16"
-									fill="none"
-									aria-hidden="true"
-									class="ml-1 h-4 w-4 stroke-current"
-									><path
-										d="M6.75 5.75 9.25 8l-2.5 2.25"
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/></svg
-								>
-							</div>
-						</article>
-						<article class="group relative flex flex-col items-start">
-							<h2
-								class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100"
-							>
-								<div
-									class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"
-								/>
-								<a href="/articles/introducing-animaginary"
-									><span
-										class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
-									/><span class="relative z-10"
-										>Introducing Animaginary: High performance web animations</span
-									></a
-								>
-							</h2>
-							<time
-								class="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5"
-								datetime="2022-09-02"
-								><span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true"
-									><span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" /></span
-								>September 2, 2022</time
-							>
-							<p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-								When you’re building a website for a company as ambitious as Planetaria, you
-								need to make an impression. I wanted people to visit our website and see
-								animations that looked more realistic than reality itself.
-							</p>
-							<div
+							{#if project.link != ''}
+								
+							View on github<svg
+								viewBox="0 0 16 16"
+								fill="none"
 								aria-hidden="true"
-								class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
+								class="ml-1 h-4 w-4 stroke-current"
+								><path
+									d="M6.75 5.75 9.25 8l-2.5 2.25"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/></svg
 							>
-								Read article<svg
-									viewBox="0 0 16 16"
-									fill="none"
-									aria-hidden="true"
-									class="ml-1 h-4 w-4 stroke-current"
-									><path
-										d="M6.75 5.75 9.25 8l-2.5 2.25"
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/></svg
-								>
+							{:else}
+								Not available <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-1 w-4 h-4">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+								</svg>				  
+							{/if}
 							</div>
 						</article>
-						<article class="group relative flex flex-col items-start">
-							<h2
-								class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100"
-							>
-								<div
-									class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"
-								/>
-								<a href="/articles/rewriting-the-cosmos-kernel-in-rust"
-									><span
-										class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
-									/><span class="relative z-10">Rewriting the cosmOS kernel in Rust</span></a
-								>
-							</h2>
-							<time
-								class="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5"
-								datetime="2022-07-14"
-								><span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true"
-									><span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" /></span
-								>July 14, 2022</time
-							>
-							<p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-								When we released the first version of cosmOS last year, it was written in Go.
-								Go is a wonderful programming language, but it’s been a while since I’ve seen
-								an article on the front page of Hacker News about rewriting some important
-								tool in Go and I see articles on there about rewriting things in Rust every
-								single week.
-							</p>
-							<div
-								aria-hidden="true"
-								class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
-							>
-								Read article<svg
-									viewBox="0 0 16 16"
-									fill="none"
-									aria-hidden="true"
-									class="ml-1 h-4 w-4 stroke-current"
-									><path
-										d="M6.75 5.75 9.25 8l-2.5 2.25"
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/></svg
-								>
-							</div>
-						</article>
+						{/each}
 					</div>
 
 					<div class="space-y-10 lg:pl-16 xl:pl-24">
+
 						<div class="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
 							<h2 class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
 								<svg
@@ -168,148 +96,43 @@
 								><span class="ml-3">Skils</span>
 							</h2>
 							<ol class="mt-6 space-y-4">
-								<li class="flex gap-4">
-									<div
-										class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
-									>
-										<img
-											alt=""
-											loading="lazy"
-											width="32"
-											height="32"
-											decoding="async"
-											data-nimg="1"
-											class="h-7 w-7"
-											src="/_next/static/media/planetaria.ecd81ade.svg"
-											style="color: transparent;"
-										/>
-									</div>
-									<dl class="flex flex-auto flex-wrap gap-x-2">
-										<dt class="sr-only">Company</dt>
-										<dd
-											class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
+								{#each skills as skill, index (skill.id)}
+									<li class="flex gap-4">
+										<div
+											class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
 										>
-											Planetaria
-										</dd>
-										<dt class="sr-only">Role</dt>
-										<dd class="text-xs text-zinc-500 dark:text-zinc-400">CEO</dd>
-										<dt class="sr-only">Date</dt>
-										<dd
-											class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-											aria-label="2019 until Present"
-										>
-											<time datetime="2019">2019</time> <span aria-hidden="true">—</span>
-											<time datetime="2023">Present</time>
-										</dd>
-									</dl>
-								</li>
-								<li class="flex gap-4">
-									<div
-										class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
-									>
-										<img
-											alt=""
-											loading="lazy"
-											width="28"
-											height="28"
-											decoding="async"
-											data-nimg="1"
-											class="h-7 w-7"
-											src="/_next/static/media/airbnb.b4000690.svg"
-											style="color: transparent;"
-										/>
-									</div>
-									<dl class="flex flex-auto flex-wrap gap-x-2">
-										<dt class="sr-only">Company</dt>
-										<dd
-											class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
-										>
-											Airbnb
-										</dd>
-										<dt class="sr-only">Role</dt>
-										<dd class="text-xs text-zinc-500 dark:text-zinc-400">Product Designer</dd>
-										<dt class="sr-only">Date</dt>
-										<dd
-											class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-											aria-label="2014 until 2019"
-										>
-											<time datetime="2014">2014</time> <span aria-hidden="true">—</span>
-											<time datetime="2019">2019</time>
-										</dd>
-									</dl>
-								</li>
-								<li class="flex gap-4">
-									<div
-										class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
-									>
-										<img
-											alt=""
-											loading="lazy"
-											width="28"
-											height="28"
-											decoding="async"
-											data-nimg="1"
-											class="h-7 w-7"
-											src="/_next/static/media/facebook.dd9e7d48.svg"
-											style="color: transparent;"
-										/>
-									</div>
-									<dl class="flex flex-auto flex-wrap gap-x-2">
-										<dt class="sr-only">Company</dt>
-										<dd
-											class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
-										>
-											Facebook
-										</dd>
-										<dt class="sr-only">Role</dt>
-										<dd class="text-xs text-zinc-500 dark:text-zinc-400">
-											iOS Software Engineer
-										</dd>
-										<dt class="sr-only">Date</dt>
-										<dd
-											class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-											aria-label="2011 until 2014"
-										>
-											<time datetime="2011">2011</time> <span aria-hidden="true">—</span>
-											<time datetime="2014">2014</time>
-										</dd>
-									</dl>
-								</li>
-								<li class="flex gap-4">
-									<div
-										class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
-									>
-										<img
-											alt=""
-											loading="lazy"
-											width="28"
-											height="28"
-											decoding="async"
-											data-nimg="1"
-											class="h-7 w-7"
-											src="/_next/static/media/starbucks.4a5bd050.svg"
-											style="color: transparent;"
-										/>
-									</div>
-									<dl class="flex flex-auto flex-wrap gap-x-2">
-										<dt class="sr-only">Company</dt>
-										<dd
-											class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
-										>
-											Starbucks
-										</dd>
-										<dt class="sr-only">Role</dt>
-										<dd class="text-xs text-zinc-500 dark:text-zinc-400">Shift Supervisor</dd>
-										<dt class="sr-only">Date</dt>
-										<dd
-											class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-											aria-label="2008 until 2011"
-										>
-											<time datetime="2008">2008</time> <span aria-hidden="true">—</span>
-											<time datetime="2011">2011</time>
-										</dd>
-									</dl>
-								</li>
+											<!-- <img
+												alt=""
+												loading="lazy"
+												width="32"
+												height="32"
+												decoding="async"
+												data-nimg="1"
+												class="h-7 w-7"
+												src=""
+												style="color: transparent;"
+											/> -->
+										</div>
+										<dl class="flex flex-auto flex-wrap gap-x-2">
+											<dt class="sr-only">Tech</dt>
+											<dd
+												class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
+											>
+												{skill.name}
+											</dd>
+											<dt class="sr-only">Level</dt>
+											<dd class="text-xs text-zinc-500 dark:text-zinc-400">{skill.level}</dd>
+											<dt class="sr-only">Date</dt>
+											<dd
+												class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+												aria-label="2019 until Present"
+											>
+											 <span aria-hidden="true">Up to Date</span>
+											</dd>
+										</dl>
+									</li>
+								{/each}
+
 							</ol>
 							<a
 								class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 group mt-6 w-full"
@@ -349,166 +172,53 @@
 								><span class="ml-3">Educations</span>
 							</h2>
 							<ol class="mt-6 space-y-4">
-								<li class="flex gap-4">
-									<div
-										class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
-									>
-										<img
-											alt=""
-											loading="lazy"
-											width="32"
-											height="32"
-											decoding="async"
-											data-nimg="1"
-											class="h-7 w-7"
-											src="/_next/static/media/planetaria.ecd81ade.svg"
-											style="color: transparent;"
-										/>
-									</div>
+								{#each educations as education, index (education.id)}
+									<li class="flex gap-4">
+										<dl class="flex flex-auto flex-wrap gap-x-2">
+											<dt class="sr-only">{education.name}</dt>
+											<dd
+												class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
+											>
+											{education.place}
+												<!-- STMIK Triguna Dharma -->
+											</dd>
+											<dt class="sr-only">Major</dt>
+											<dd class="text-xs text-zinc-500 dark:text-zinc-400">{education.description}</dd>
+											<dt class="sr-only">Date</dt>
+											<dd
+												class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+												aria-label="2019 until Present"
+											>
+												<time datetime="{education.start_date}">{education.start_date}</time> <span aria-hidden="true">—</span>
+												<time datetime="{education.end_date}">{education.end_date}</time>
+											</dd>
+										</dl>
+									</li>
+								{/each}
+
+								<!-- <li class="flex gap-4">
 									<dl class="flex flex-auto flex-wrap gap-x-2">
-										<dt class="sr-only">Company</dt>
+										<dt class="sr-only">Senior Highschool</dt>
 										<dd
 											class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
 										>
-											Planetaria
+											SMK Nur Azizi
 										</dd>
-										<dt class="sr-only">Role</dt>
-										<dd class="text-xs text-zinc-500 dark:text-zinc-400">CEO</dd>
-										<dt class="sr-only">Date</dt>
-										<dd
-											class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-											aria-label="2019 until Present"
-										>
-											<time datetime="2019">2019</time> <span aria-hidden="true">—</span>
-											<time datetime="2023">Present</time>
-										</dd>
-									</dl>
-								</li>
-								<li class="flex gap-4">
-									<div
-										class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
-									>
-										<img
-											alt=""
-											loading="lazy"
-											width="28"
-											height="28"
-											decoding="async"
-											data-nimg="1"
-											class="h-7 w-7"
-											src="/_next/static/media/airbnb.b4000690.svg"
-											style="color: transparent;"
-										/>
-									</div>
-									<dl class="flex flex-auto flex-wrap gap-x-2">
-										<dt class="sr-only">Company</dt>
-										<dd
-											class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
-										>
-											Airbnb
-										</dd>
-										<dt class="sr-only">Role</dt>
-										<dd class="text-xs text-zinc-500 dark:text-zinc-400">Product Designer</dd>
+										<dt class="sr-only">Major</dt>
+										<dd class="text-xs text-zinc-500 dark:text-zinc-400">Vocational High School Accounting Department</dd>
 										<dt class="sr-only">Date</dt>
 										<dd
 											class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
 											aria-label="2014 until 2019"
 										>
-											<time datetime="2014">2014</time> <span aria-hidden="true">—</span>
-											<time datetime="2019">2019</time>
+											<time datetime="2015">2015</time> <span aria-hidden="true">—</span>
+											<time datetime="2018">2018</time>
 										</dd>
 									</dl>
-								</li>
-								<li class="flex gap-4">
-									<div
-										class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
-									>
-										<img
-											alt=""
-											loading="lazy"
-											width="28"
-											height="28"
-											decoding="async"
-											data-nimg="1"
-											class="h-7 w-7"
-											src="/_next/static/media/facebook.dd9e7d48.svg"
-											style="color: transparent;"
-										/>
-									</div>
-									<dl class="flex flex-auto flex-wrap gap-x-2">
-										<dt class="sr-only">Company</dt>
-										<dd
-											class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
-										>
-											Facebook
-										</dd>
-										<dt class="sr-only">Role</dt>
-										<dd class="text-xs text-zinc-500 dark:text-zinc-400">
-											iOS Software Engineer
-										</dd>
-										<dt class="sr-only">Date</dt>
-										<dd
-											class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-											aria-label="2011 until 2014"
-										>
-											<time datetime="2011">2011</time> <span aria-hidden="true">—</span>
-											<time datetime="2014">2014</time>
-										</dd>
-									</dl>
-								</li>
-								<li class="flex gap-4">
-									<div
-										class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
-									>
-										<img
-											alt=""
-											loading="lazy"
-											width="28"
-											height="28"
-											decoding="async"
-											data-nimg="1"
-											class="h-7 w-7"
-											src="/_next/static/media/starbucks.4a5bd050.svg"
-											style="color: transparent;"
-										/>
-									</div>
-									<dl class="flex flex-auto flex-wrap gap-x-2">
-										<dt class="sr-only">Company</dt>
-										<dd
-											class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"
-										>
-											Starbucks
-										</dd>
-										<dt class="sr-only">Role</dt>
-										<dd class="text-xs text-zinc-500 dark:text-zinc-400">Shift Supervisor</dd>
-										<dt class="sr-only">Date</dt>
-										<dd
-											class="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-											aria-label="2008 until 2011"
-										>
-											<time datetime="2008">2008</time> <span aria-hidden="true">—</span>
-											<time datetime="2011">2011</time>
-										</dd>
-									</dl>
-								</li>
+								</li> -->
 							</ol>
-							<a
-								class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 group mt-6 w-full"
-								href="/#"
-								>Download CV<svg
-									viewBox="0 0 16 16"
-									fill="none"
-									aria-hidden="true"
-									class="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50"
-									><path
-										d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/></svg
-								></a
-							>
 						</div>
+
 					</div>
 				</div>
 			</div>

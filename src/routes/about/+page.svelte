@@ -1,3 +1,16 @@
+<script>
+	import aboutPicture from '$lib/assets/profile-3.jpg'
+	import { socials } from '$lib/data/data'
+	let email = socials.filter(item => item.name == 'Email')
+	let github = socials.filter(item => item.name == 'Github')
+	let whatsapp = socials.filter(item => item.name == 'WhatsApp')
+	let linkedin = socials.filter(item => item.name == 'Linkedin')
+	let instagram = socials.filter(item => item.name == 'Instagram')
+	let twitter = socials.filter(item => item.name == 'Twitter')
+</script>
+<svelte:head>
+	<title>Protofolio | About</title>
+</svelte:head>
 <div class="sm:px-8 mt-16 sm:mt-32">
 	<div class="mx-auto max-w-7xl lg:px-8">
 		<div class="relative px-4 sm:px-8 lg:px-12">
@@ -16,8 +29,7 @@
 								data-nimg="1"
 								class="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
 								sizes="(min-width: 1024px) 32rem, 20rem"
-								srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=16&amp;q=75 16w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=32&amp;q=75 32w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=48&amp;q=75 48w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=64&amp;q=75 64w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=96&amp;q=75 96w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=128&amp;q=75 128w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=256&amp;q=75 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=384&amp;q=75 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=640&amp;q=75 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=750&amp;q=75 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=828&amp;q=75 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=3840&amp;q=75 3840w"
-								src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fportrait.79754e9e.jpg&amp;w=3840&amp;q=75"
+								src={aboutPicture}
 								style="color: transparent;"
 							/>
 						</div>
@@ -26,7 +38,7 @@
 						<h1
 							class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
 						>
-							I’m Spencer Sharp. I live in New York City, where I design the future.
+							I’m Irfan Ramadhan. Enthusiast Backend Developer.
 						</h1>
 						<div class="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
 							<p>
@@ -60,7 +72,7 @@
 							<li class="flex">
 								<a
 									class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
-									href="/about#"
+									href="{twitter[0].link}"
 									><svg
 										viewBox="0 0 24 24"
 										aria-hidden="true"
@@ -68,13 +80,13 @@
 										><path
 											d="M20.055 7.983c.011.174.011.347.011.523 0 5.338-3.92 11.494-11.09 11.494v-.003A10.755 10.755 0 0 1 3 18.186c.308.038.618.057.928.058a7.655 7.655 0 0 0 4.841-1.733c-1.668-.032-3.13-1.16-3.642-2.805a3.753 3.753 0 0 0 1.76-.07C5.07 13.256 3.76 11.6 3.76 9.676v-.05a3.77 3.77 0 0 0 1.77.505C3.816 8.945 3.288 6.583 4.322 4.737c1.98 2.524 4.9 4.058 8.034 4.22a4.137 4.137 0 0 1 1.128-3.86A3.807 3.807 0 0 1 19 5.274a7.657 7.657 0 0 0 2.475-.98c-.29.934-.9 1.729-1.713 2.233A7.54 7.54 0 0 0 22 5.89a8.084 8.084 0 0 1-1.945 2.093Z"
 										/></svg
-									><span class="ml-4">Follow on Twitter</span></a
+									><span class="ml-4">Follow on Twitter @{twitter[0].username}</span></a
 								>
 							</li>
 							<li class="mt-4 flex">
 								<a
 									class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
-									href="/about#"
+									href="{instagram[0].link}"
 									><svg
 										viewBox="0 0 24 24"
 										aria-hidden="true"
@@ -84,13 +96,13 @@
 										/><path
 											d="M12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm0-7.622a4.622 4.622 0 1 0 0 9.244 4.622 4.622 0 0 0 0-9.244Zm5.884-.182a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0Z"
 										/></svg
-									><span class="ml-4">Follow on Instagram</span></a
+									><span class="ml-4">Follow on Instagram @{instagram[0].username}</span></a
 								>
 							</li>
 							<li class="mt-4 flex">
 								<a
 									class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
-									href="/about#"
+									href="{github[0].link}"
 									><svg
 										viewBox="0 0 24 24"
 										aria-hidden="true"
@@ -100,13 +112,13 @@
 											clip-rule="evenodd"
 											d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"
 										/></svg
-									><span class="ml-4">Follow on GitHub</span></a
+									><span class="ml-4">Follow on GitHub @{github[0].username}</span></a
 								>
 							</li>
 							<li class="mt-4 flex">
 								<a
 									class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
-									href="/about#"
+									href="{linkedin[0].link}"
 									><svg
 										viewBox="0 0 24 24"
 										aria-hidden="true"
@@ -120,16 +132,31 @@
 							<li class="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40 flex">
 								<a
 									class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
-									href="mailto:spencer@planetaria.tech"
-									><svg
+									href="{email[0].link}"
+									>
+									<svg
 										viewBox="0 0 24 24"
 										aria-hidden="true"
 										class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500"
 										><path
 											fill-rule="evenodd"
 											d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
-										/></svg
-									><span class="ml-4">spencer@planetaria.tech</span></a
+										/>
+									</svg>
+									<span class="ml-4">{email[0].username}</span></a
+								>
+							</li>
+							<li class="mt-4 flex">
+								<a
+									class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+									href="{whatsapp[0].link}"
+									>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500">
+										<path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
+									  </svg>
+									  
+
+									<span class="ml-4">WhatsApp me at : {whatsapp[0].username}</span></a
 								>
 							</li>
 						</ul>

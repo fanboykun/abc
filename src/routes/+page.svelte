@@ -3,7 +3,9 @@
 	import Header from "../components/Header.svelte";
 	import Projects from "../components/Projects.svelte";
 </script>
-
+<svelte:head>
+	<title>Protofolio</title>
+</svelte:head>
 <Header />
 <Projects />
 <Stack />

@@ -1,3 +1,7 @@
+<script>
+    import { page } from '$app/stores';
+    import mainProfile from '$lib/assets/profile-1.jpg';
+</script>
 <header class="pointer-events-none relative z-50 flex flex-col" style="height:var(--header-height);margin-bottom:var(--header-mb)">
     <div class="top-0 z-10 h-16 pt-6" style="position:var(--header-position)">
         <div
@@ -22,8 +26,7 @@
                                             data-nimg="1"
                                             class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-9 w-9"
                                             sizes="2.25rem"
-                                            srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=16&amp;q=75 16w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=32&amp;q=75 32w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=48&amp;q=75 48w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=64&amp;q=75 64w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=96&amp;q=75 96w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=128&amp;q=75 128w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=256&amp;q=75 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=384&amp;q=75 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=640&amp;q=75 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=750&amp;q=75 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=828&amp;q=75 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=3840&amp;q=75 3840w"
-                                            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&amp;w=3840&amp;q=75"
+                                            src={mainProfile}
                                             style="color: transparent;"
                                         /></a
                                     >
@@ -37,17 +40,20 @@
                                     >
                                         <li>
                                             <a
-                                                class="relative block px-3 py-2 transition text-teal-500 dark:text-teal-400"
+                                                class="relative block px-3 py-2 transition { $page.url.pathname == '/' ? 'text-teal-500 dark:text-teal-400' : ' hover:text-teal-500 dark:hover:text-teal-400' } "
                                                 href="/"
                                                 >Home<span
-                                                    class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"
-                                                /></a
+                                                    class="{$page.url.pathname == '/' ? 'absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0' : '' }" />
+                                                </a
                                             >
                                         </li>
                                         <li>
                                             <a
-                                                class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
-                                                href="/about">About</a
+                                                class="relative block px-3 py-2 transition { $page.url.pathname == '/about' ? 'text-teal-500 dark:text-teal-400' : ' hover:text-teal-500 dark:hover:text-teal-400' }"
+                                                href="/about">
+                                                About<span
+                                                    class="{$page.url.pathname == '/about' ? 'absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0' : '' }" />
+                                                </a
                                             >
                                         </li>
                                     </ul>
