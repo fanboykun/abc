@@ -2,78 +2,100 @@ export const projects = [
     {
         id: 1,
         type: "Client Project",
-        about: "Project 1",
-        description: "This is project 1",
+        about: "Creating Dropshipping App for Client",
+        description: "Project build with laravel, livewire, alpine.js and tailwind css. This project is about dropshipping app for client, this app is used to manage product, order, and customer also role management. I implementing alots of advanced thing, such as auth, email validation, calculate profit for the owner, the dropshipper and making sure that not a single n+1 query executed. The UI/UX aspect also one thing that i point out here, making sure that the app will help it's user know exactly what to do. This app is still in development, and i'm still working on it.",
         link: "",
     },
     {
         id: 2,
         type: "Personal Project",
-        about: "Project 2",
-        name: "Project 2",
-        description: "This is project 2",
-        link: "https://github.com",
+        about: "Implementing Data Mining and Decission Support System Algorithm",
+        description: "I have harnessed the power of PHP and Laravel to bring to life various cutting-edge algorithms. Through meticulous coding and a deep understanding of data analysis, I have implemented renowned algorithms such as K-means, C4.5, Waspas, and MOORA. Step into the world of intelligent decision-making as I showcase the practical applications of these algorithms in real-world scenarios. Witness the power of K-means clustering algorithm as it effectively groups data points, C4.5 algorithm's ability to generate decision trees for classification tasks, Waspas algorithm's comprehensive multi-criteria decision-making capabilities, and MOORA algorithm's powerful ranking and sorting capabilities.",
+        link: "https://github.com/fanboykun",
+    },
+    {
+        id: 3,
+        type: "Client Project",
+        about: "Static Site Project, A Company Profile for Client",
+        description: "a stunning static site company profile, developed using a dynamic combination of SvelteKit, Vue.js, and React. With clean and elegant design, responsive layout, and fast-loading pages, this website serves as a dynamic representation of the company's brand and ethos. Through the seamless integration of SvelteKit, Vue.js, and React, I have crafted a flawless user experience that highlights the company's unique offerings and core values. Whether viewed on desktop or mobile devices, this static site company profile presents a professional image and showcases my skills in frontend development. ",
+        link: "",
+    },
+    {
+        id: 4,
+        type: "Personal Project",
+        about: "RESTful Api With Laravel",
+        description: "RESTful API built with Laravel that serves content akin to the renowned Google Classroom platform. With a comprehensive understanding of Laravel's powerful capabilities, I have meticulously crafted this API to facilitate seamless content delivery, user management, and interaction within an educational ecosystem. By adopting industry best practices and adhering to RESTful principles, this API offers standardized endpoints, providing developers with a familiar and intuitive experience for integrating it into their applications. It delivers a seamless and efficient communication layer between frontend systems and the underlying database, empowering developers to build interactive and feature-rich educational applications.",
+        link: "https://github.com/fanboykun",
+    },
+    {
+        id: 5,
+        type: "Client Project",
+        about: "Library Management System using .NET",
+        description: "a comprehensive library management system developed using the versatile .NET framework. This system harnesses the power of .NET to provide a seamless and efficient solution for organizing and managing libraries of all sizes. By employing best practices in software development, I have implemented a modular and extensible architecture, allowing for easy integration of additional features and enhancements in the future. The system's intuitive user interface and responsive design ensure that both librarians and library patrons have a seamless and enjoyable experience.",
+        link: "",
     }
 ]
 
-export const skills = [
+export const stacks = [
     {
         id: 1,
         name: "Laravel",
         level: "Advanced",
-        logo: null,
+        logo: '/images/laravel.png',
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
         id: 2,
         name: "Livewire",
         level: "Advanced",
-        logo: null,
+        logo: '/images/livewire.png',
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
         id: 3,
         name: "Node Js",
         level: "Intermediate",
-        logo: null,
+        logo: '/images/nodejs.png',
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
         id: 4,
-        name: "Sql Database",
+        name: "SQL Database",
         level: "Advanced",
-        logo: null,
+        logo: '/images/sql.png',
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
         id: 5,
         name: "Alpine Js",
         level: "Advanced",
-        logo: null,
+        logo: '/images/alpinejs.png',
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
         id: 6,
         name: "Tailwind CSS",
         level: "Intermediate",
-        logo: null,
+        logo: '/images/tailwind.png',
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
         id: 7,
         name: "SvelteKit",
         level: "Intermediate",
-        logo: null,
+        logo: '/images/svelte.png',
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
         id: 8,
         name: "Python",
         level: "Begginer",
-        logo: null,
+        logo: '/images/python.png',
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
 ]
+
+export const skils = []
 
 export const educations = [
     {
