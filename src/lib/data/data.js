@@ -1,11 +1,18 @@
 export const projects = [
     {
-        id: 1,
+        id: 5,
         type: "Client Project",
-        about: "Creating Dropshipping App for Client",
-        description: "Project build with laravel, livewire, alpine.js and tailwind css. This project is about dropshipping app for client, this app is used to manage product, order, and customer also role management. I implementing alots of advanced thing, such as auth, email validation, calculate profit for the owner, the dropshipper and making sure that not a single n+1 query executed. The UI/UX aspect also one thing that i point out here, making sure that the app will help it's user know exactly what to do. This app is still in development, and i'm still working on it.",
+        about: "Fullstack Development With TALL Stack",
+        description: "I have developed couples of fullstack app, using an exceptional stack that includes Laravel, Livewire, Alpine.js, and Tailwind CSS. Through these powerful technologies, I have created immersive and dynamic web applications that combine robust backend functionality with elegant and responsive frontend designs. With Laravel as the foundation, I have built scalable and secure applications, leveraging its powerful features such as routing, ORM, and authentication. The integration of Livewire has allowed me to create rich and interactive user interfaces, seamlessly updating components without the need for page reloads. Alpine.js brings additional interactivity to the projects, enabling dynamic behavior and user interactions, while Tailwind CSS provides a highly customizable and utility-first approach to crafting beautiful and responsive designs.",
         link: "",
     },
+    // {
+    //     id: 1,
+    //     type: "Client Project",
+    //     about: "Creating Dropshipping App for Client",
+    //     description: "Project build with laravel, livewire, alpine.js and tailwind css. This project is about dropshipping app for client, this app is used to manage product, order, and customer also role management. I implementing alots of advanced thing, such as auth, email validation, calculate profit for the owner, the dropshipper and making sure that not a single n+1 query executed. The UI/UX aspect also one thing that i point out here, making sure that the app will help it's user know exactly what to do. This app is still in development, and i'm still working on it.",
+    //     link: "",
+    // },
     {
         id: 2,
         type: "Personal Project",
@@ -16,24 +23,17 @@ export const projects = [
     {
         id: 3,
         type: "Client Project",
-        about: "Static Site Project, A Company Profile for Client",
-        description: "a stunning static site company profile, developed using a dynamic combination of SvelteKit, Vue.js, and React. With clean and elegant design, responsive layout, and fast-loading pages, this website serves as a dynamic representation of the company's brand and ethos. Through the seamless integration of SvelteKit, Vue.js, and React, I have crafted a flawless user experience that highlights the company's unique offerings and core values. Whether viewed on desktop or mobile devices, this static site company profile presents a professional image and showcases my skills in frontend development. ",
+        about: "Static Site Project, Using Various Powerfull Js Framework",
+        description: "I have developed some stunning static site company profile, developed using modern powerfull javascript framework, such as SvelteKit, Vue.js, and React. Implementing clean and elegant design, responsive layout, and fast-loading pages. Through the seamless integration of SvelteKit, Vue.js, and React, I have crafted a flawless user experience, whether viewed on desktop or mobile devices, this static site presents a professional image and showcases my skills in frontend development. ",
         link: "",
     },
     {
         id: 4,
         type: "Personal Project",
         about: "RESTful Api With Laravel",
-        description: "RESTful API built with Laravel that serves content akin to the renowned Google Classroom platform. With a comprehensive understanding of Laravel's powerful capabilities, I have meticulously crafted this API to facilitate seamless content delivery, user management, and interaction within an educational ecosystem. By adopting industry best practices and adhering to RESTful principles, this API offers standardized endpoints, providing developers with a familiar and intuitive experience for integrating it into their applications. It delivers a seamless and efficient communication layer between frontend systems and the underlying database, empowering developers to build interactive and feature-rich educational applications.",
+        description: "These projects demonstrate my expertise in building robust and scalable APIs that adhere to RESTful principles, allowing seamless communication and data exchange between client applications and the server. Through these projects, I have implemented various API endpoints, enabling CRUD operations, data filtering, sorting, and pagination. Robust authentication mechanisms such as JWT (JSON Web Tokens) or Sanctum have been incorporated to ensure secure access control. Error handling, input validation, and response formatting have been meticulously implemented to provide a smooth and consistent API experience.",
         link: "https://github.com/fanboykun",
     },
-    {
-        id: 5,
-        type: "Client Project",
-        about: "Library Management System using .NET",
-        description: "a comprehensive library management system developed using the versatile .NET framework. This system harnesses the power of .NET to provide a seamless and efficient solution for organizing and managing libraries of all sizes. By employing best practices in software development, I have implemented a modular and extensible architecture, allowing for easy integration of additional features and enhancements in the future. The system's intuitive user interface and responsive design ensure that both librarians and library patrons have a seamless and enjoyable experience.",
-        link: "",
-    }
 ]
 
 export const stacks = [
@@ -42,56 +42,56 @@ export const stacks = [
         name: "Laravel",
         level: "Advanced",
         logo: '/images/laravel.png',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        description: "Advance Level",
     },
     {
         id: 2,
         name: "Livewire",
         level: "Advanced",
         logo: '/images/livewire.png',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        description: "Advance Level",
     },
     {
         id: 3,
         name: "Node Js",
         level: "Intermediate",
         logo: '/images/nodejs.png',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        description: "Intermediate Level",
     },
     {
         id: 4,
         name: "SQL Database",
         level: "Advanced",
         logo: '/images/sql.png',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        description: "Advance Level",
     },
     {
         id: 5,
         name: "Alpine Js",
         level: "Advanced",
         logo: '/images/alpinejs.png',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        description: "Advance Level",
     },
     {
         id: 6,
         name: "Tailwind CSS",
         level: "Intermediate",
         logo: '/images/tailwind.png',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        description: "Advance Level",
     },
     {
         id: 7,
         name: "SvelteKit",
         level: "Intermediate",
         logo: '/images/svelte.png',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        description: "Intermediate Level",
     },
     {
         id: 8,
         name: "Python",
         level: "Begginer",
         logo: '/images/python.png',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        description: "Beginner Level for Data Science",
     },
 ]
 
