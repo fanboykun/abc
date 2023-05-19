@@ -12,7 +12,7 @@
 					</h1>
 				</header>
 				<div class="mt-8 sm:mt-8">
-					<ul role="list" class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+					<ul class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
 						{#each stacks as stack, index (stack.id)}
 						<li class="group relative flex flex-col items-start">
 							<div
