@@ -21,7 +21,6 @@
 								<div
 									class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"
 								/>
-								{#if project.link != ""}
 								<a href="{project.link}"
 									><span
 										class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
@@ -29,13 +28,6 @@
 										>{project.about}</span
 									></a
 								>
-								{:else}
-								<span
-									class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
-								/><span class="relative z-10"
-									>{project.about}</span
-								>
-								{/if}
 							</h2>
 							<span class="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5">
 								<span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
@@ -48,10 +40,8 @@
 							<div
 								aria-hidden="true"
 								class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
-							>
-							{#if project.link != ''}
-								
-							View on github<svg
+							>								
+							View list on github<svg
 								viewBox="0 0 16 16"
 								fill="none"
 								aria-hidden="true"
@@ -63,11 +53,6 @@
 									stroke-linejoin="round"
 								/></svg
 							>
-							{:else}
-								Not available <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-1 w-4 h-4">
-									<path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
-								</svg>				  
-							{/if}
 							</div>
 						</article>
 						{/each}

@@ -9,7 +9,7 @@
 	let twitter = socials.filter(item => item.name == 'Twitter')
 </script>
 <svelte:head>
-	<title>Protofolio | About</title>
+	<title>Portofolio | About</title>
 </svelte:head>
 <div class="sm:px-8 mt-16 sm:mt-32">
 	<div class="mx-auto max-w-7xl lg:px-8">
@@ -62,7 +62,7 @@
 						</div>
 					</div>
 					<div class="lg:pl-20">
-						<ul role="list">
+						<ul>
 							<li class="flex">
 								<a
 									class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
