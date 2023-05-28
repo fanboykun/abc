@@ -1,31 +1,31 @@
 export const projects = [
     {
         id: 5,
-        type: "Client Project",
+        type: "Client & Personal Project",
         about: "Fullstack Development With TALL Stack",
         description: "I have developed couples of fullstack app, using an exceptional stack that includes Laravel, Livewire, Alpine.js, and Tailwind CSS. Through these powerful technologies, I have created immersive and dynamic web applications that combine robust backend functionality with elegant and responsive frontend designs. With Laravel as the foundation, I have built scalable and secure applications, leveraging its powerful features such as routing, ORM, and authentication. The integration of Livewire has allowed me to create rich and interactive user interfaces, seamlessly updating components without the need for page reloads. Alpine.js brings additional interactivity to the projects, enabling dynamic behavior and user interactions, while Tailwind CSS provides a highly customizable and utility-first approach to crafting beautiful and responsive designs.",
-        link: "https://github.com/fanboykun/personal-portofolio#readme",
+        link: "https://github.com/fanboykun/personal-portofolio#fullstack-project",
     },
     {
         id: 2,
-        type: "Personal Project",
+        type: "Client & Personal Project",
         about: "Implementing Data Mining and Decission Support System Algorithm",
         description: "I have harnessed the power of PHP and Laravel to bring to life various cutting-edge algorithms. Through meticulous coding and a deep understanding of data analysis, I have implemented renowned algorithms such as K-means, C4.5, Waspas, and MOORA. Step into the world of intelligent decision-making as I showcase the practical applications of these algorithms in real-world scenarios. Witness the power of K-means clustering algorithm as it effectively groups data points, C4.5 algorithm's ability to generate decision trees for classification tasks, Waspas algorithm's comprehensive multi-criteria decision-making capabilities, and MOORA algorithm's powerful ranking and sorting capabilities.",
-        link: "https://github.com/fanboykun/personal-portofolio#readme",
+        link: "https://github.com/fanboykun/personal-portofolio#data-mining--decission-support-system-algorithm",
     },
     {
         id: 3,
-        type: "Client Project",
+        type: "Client & Personal Project",
         about: "Static Site Project, Using Various Powerfull Js Framework",
         description: "I have developed some stunning static site company profile, developed using modern powerfull javascript framework, such as SvelteKit, Vue.js, and React. Implementing clean and elegant design, responsive layout, and fast-loading pages. Through the seamless integration of SvelteKit, Vue.js, and React, I have crafted a flawless user experience, whether viewed on desktop or mobile devices, this static site presents a professional image and showcases my skills in frontend development. ",
-        link: "https://github.com/fanboykun/personal-portofolio#readme",
+        link: "https://github.com/fanboykun/personal-portofolio#static-site-project",
     },
     {
         id: 4,
         type: "Personal Project",
         about: "RESTful Api With Laravel",
         description: "These projects demonstrate my expertise in building robust and scalable APIs that adhere to RESTful principles, allowing seamless communication and data exchange between client applications and the server. Through these projects, I have implemented various API endpoints, enabling CRUD operations, data filtering, sorting, and pagination. Robust authentication mechanisms such as JWT (JSON Web Tokens) or Sanctum have been incorporated to ensure secure access control. Error handling, input validation, and response formatting have been meticulously implemented to provide a smooth and consistent API experience.",
-        link: "https://github.com/fanboykun/personal-portofolio#readme",
+        link: "https://github.com/fanboykun/personal-portofolio#restfull-api-project",
     },
 ]
 
