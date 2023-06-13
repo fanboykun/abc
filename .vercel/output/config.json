@@ -2,14 +2,14 @@
 	"version": 3,
 	"routes": [
 		{
-			"src": "/about",
-			"dest": "/about/"
+			"src": "/insight",
+			"dest": "/insight/"
 		},
 		{
-			"src": "/about/",
+			"src": "/insight/",
 			"status": 308,
 			"headers": {
-				"Location": "/about"
+				"Location": "/insight"
 			}
 		},
 		{
@@ -41,8 +41,8 @@
 		"index.html": {
 			"path": ""
 		},
-		"about.html": {
-			"path": "about"
+		"insight.html": {
+			"path": "insight"
 		},
 		"projects.html": {
 			"path": "projects"
