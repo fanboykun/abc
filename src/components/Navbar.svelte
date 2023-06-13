@@ -1,9 +1,14 @@
 <script>
 	import { page } from '$app/stores';
 	import mainProfile from '$lib/assets/profile-1.jpg';
+	import { clickOutside } from '../lib/utils/clickOutside';
+	let open = false;
+	function handleClickOutside() {
+		open = false;
+	}
 </script>
 
-<header class="pointer-events-none relative z-50 flex flex-col">
+<header class="pointer-events-none relative z-20 flex flex-col font-mono">
 	<div class="top-0 z-10 h-16 pt-6">
 		<div class="sm:px-8 w-full">
 			<div class="mx-auto max-w-7xl lg:px-8">
@@ -63,19 +68,36 @@
 												/>
 											</a>
 										</li>
-										<li>
-											<a
-												class="relative block px-3 py-2 transition {$page.url.pathname == '/about'
+										<li on:mouseenter={() => {open = true}} on:mouseleave={() => {open = false}}>
+											<button
+												on:click={() => {
+													open = !open;
+												}}
+												class="relative block px-3 py-2 transition {$page.url.pathname == '/insight' || $page.url.pathname == '/contact'
 													? 'text-teal-500 dark:text-teal-400'
 													: ' hover:text-teal-500 dark:hover:text-teal-400'}"
-												href="/about"
 											>
 												About<span
-													class={$page.url.pathname == '/about'
+													class={$page.url.pathname == '/insight'
 														? 'absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0'
 														: ''}
 												/>
-											</a>
+											</button>
+											{#if open}
+												<div
+												on:mouseleave={() => {open = false}}
+												use:clickOutside on:click_outside={handleClickOutside}
+												class="absolute top-9 z-40 shadow-lg right-0 w-auto h-auto px-8 py-2 rounded-lg bg-opacity-30 bg-white dark:bg-zinc-800/80">
+													<ul class="flex-none font-mono text-md text-gray-600 dark:text-slate-100 font-bold">
+														<li class="block py-2 hover:text-teal-500">
+															<a on:click={() => open = !open} href="/insight">Insight</a>
+														</li>
+														<li class="block py-2 hover:text-teal-500">
+															<a on:click={() => open = !open} href="/contact">Contact</a>
+														</li>
+													</ul>
+												</div>
+											{/if}
 										</li>
 									</ul>
 								</nav>

@@ -33,62 +33,88 @@ export const stacks = [
     {
         id: 1,
         name: "Laravel",
-        level: "Advanced",
+        level: "Advanced Level",
         logo: '/images/laravel.png',
-        description: "Advance Level",
+        description: [
+            'Able to create a RESTful API with Laravel',
+            'Able to create a Fullstack App with Laravel',
+        ],
     },
     {
         id: 2,
         name: "Livewire",
-        level: "Advanced",
+        level: "Advanced Level",
         logo: '/images/livewire.png',
-        description: "Advance Level",
+        description: [
+            'Able wo create a Fullstack App with Livewire and Alpine Js',
+            'Able to create dinamic component with Livewire',
+            'Able to maintain a large scale project with Livewire',
+        ],
     },
     {
         id: 3,
         name: "Node Js",
-        level: "Intermediate",
+        level: "Intermediate Level",
         logo: '/images/nodejs.png',
-        description: "Intermediate Level",
+        description: [
+            'Able to create a RESTful API with Node Js',
+            'Able to create a Fullstack App with Node Js',
+            'Able to make a realtime app with Node Js'
+        ],
     },
     {
         id: 4,
         name: "SQL Database",
-        level: "Advanced",
+        level: "Advanced Level",
         logo: '/images/sql.png',
-        description: "Advance Level",
+        description: [
+            'Able to make a complex query with SQL',
+            'Able to maintain query performance with SQL'
+        ],
     },
     {
         id: 5,
         name: "Alpine Js",
-        level: "Advanced",
+        level: "Advanced Level",
         logo: '/images/alpinejs.png',
-        description: "Advance Level",
+        description: [
+            'Able to create a Fullstack App with Livewire and Alpine Js',
+            'Able to create dinamic component with Alpine Js',
+        ],
     },
     {
         id: 6,
         name: "Tailwind CSS",
-        level: "Intermediate",
+        level: "Intermediate Level",
         logo: '/images/tailwind.png',
-        description: "Advance Level",
+        description: [
+            'Able to create UI with Tailwind CSS',
+            'Able to implement Tailwind Component and Utility',
+            'Able to use Tailwind classes'
+        ],
     },
     {
         id: 7,
         name: "SvelteKit",
-        level: "Intermediate",
+        level: "Intermediate Level",
         logo: '/images/svelte.png',
-        description: "Intermediate Level",
+        description: [
+            'Able to create a static site with SvelteKit',
+            'Able to implement sveltekit Api',
+        ],
     },
     {
         id: 8,
         name: "Python",
-        level: "Begginer",
+        level: "Begginer Level",
         logo: '/images/python.png',
-        description: "Beginner Level for Data Science",
+        description: [
+            'Able to implement Python Library to make data analysis and machine learning',
+            'Able to make a simple data analysis with python',
+            'Able to make a simple machine learning with python',
+        ],
     },
 ]
-
-export const skils = []
 
 export const educations = [
     {
@@ -126,27 +152,20 @@ export const socials = [
     },
     {
         id: 3,
-        name: "WhatsApp",
-        username: "083132694388",
-        link: "https://wa.me/083132694388",
-        icon: '<svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" > <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>',
-    },
-    {
-        id: 4,
         name: "Email",
         username: "irfanramadhan1812@gmail.com",
         link: "mailto:irfanramadhan1812@gmail.com",
         icon: '<svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" > <path fill-rule="evenodd" clip-rule="evenodd"  d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /> </svg>',
     },
     {
-        id: 5,
+        id: 4,
         name: "Twitter",
         username: "el_Chaconne",
         link: "https://twitter.com/el_Chaconne",
         icon: '<svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"><path d="M20.055 7.983c.011.174.011.347.011.523 0 5.338-3.92 11.494-11.09 11.494v-.003A10.755 10.755 0 0 1 3 18.186c.308.038.618.057.928.058a7.655 7.655 0 0 0 4.841-1.733c-1.668-.032-3.13-1.16-3.642-2.805a3.753 3.753 0 0 0 1.76-.07C5.07 13.256 3.76 11.6 3.76 9.676v-.05a3.77 3.77 0 0 0 1.77.505C3.816 8.945 3.288 6.583 4.322 4.737c1.98 2.524 4.9 4.058 8.034 4.22a4.137 4.137 0 0 1 1.128-3.86A3.807 3.807 0 0 1 19 5.274a7.657 7.657 0 0 0 2.475-.98c-.29.934-.9 1.729-1.713 2.233A7.54 7.54 0 0 0 22 5.89a8.084 8.084 0 0 1-1.945 2.093Z"/></svg>',
     },
     {
-        id: 6,
+        id: 5,
         name: "Instagram",
         username: "joyy_bae",
         link: "https://www.instagram.com/joyy_bae/",
