@@ -1,4 +1,5 @@
 <script>
+    import { fly, fade } from 'svelte/transition'
     export let data;
 </script>
 
@@ -13,7 +14,7 @@
         From: "opacity-100"
         To: "opacity-0"
     -->
-    <div class="fixed inset-0 bg-slate-900/25 backdrop-blur-sm transition-opacity"></div>
+    <div transition:fade class="fixed inset-0 bg-slate-900/25 backdrop-blur-sm transition-opacity"></div>
 
     <div class="fixed inset-0 z-10 overflow-y-auto">
     <div class="flex min-h-full items-start justify-center p-4 text-center sm:p-0">
@@ -27,7 +28,7 @@
             From: "opacity-100 translate-y-0 sm:scale-100"
             To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
         -->
-        <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg dark:bg-slate-800">
+        <div transition:fly={{ y: 100, duration: 500 }} class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg dark:bg-slate-800">
         <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4 dark:bg-slate-800">
             <div class="sm:flex sm:items-start">
             <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center bg-white rounded-full sm:mx-0 sm:h-10 sm:w-10 dark:bg-slate-800">

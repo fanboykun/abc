@@ -20,6 +20,11 @@ function subscribe(store, ...callbacks) {
   return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
 }
 /* @__PURE__ */ new Set();
+function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
+  const e = document.createEvent("CustomEvent");
+  e.initCustomEvent(type, bubbles, cancelable, detail);
+  return e;
+}
 /* @__PURE__ */ new Map();
 let current_component;
 function set_current_component(component) {
@@ -29,6 +34,20 @@ function get_current_component() {
   if (!current_component)
     throw new Error("Function called outside component initialization");
   return current_component;
+}
+function createEventDispatcher() {
+  const component = get_current_component();
+  return (type, detail, { cancelable = false } = {}) => {
+    const callbacks = component.$$.callbacks[type];
+    if (callbacks) {
+      const event = custom_event(type, detail, { cancelable });
+      callbacks.slice().forEach((fn) => {
+        fn.call(component, event);
+      });
+      return !event.defaultPrevented;
+    }
+    return true;
+  };
 }
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
@@ -148,10 +167,11 @@ export {
   subscribe as a,
   add_attribute as b,
   create_ssr_component as c,
-  each as d,
+  safe_not_equal as d,
   escape as e,
-  safe_not_equal as f,
+  each as f,
   getContext as g,
+  createEventDispatcher as h,
   missing_component as m,
   noop as n,
   setContext as s,

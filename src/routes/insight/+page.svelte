@@ -1,6 +1,28 @@
 <script>
 	import aboutPicture from '$lib/assets/profile-3.jpg'
 	import { educations } from '$lib/data/data'
+	import Saos from 'saos';
+	function typewriter(node, { speed = 1 }) {
+		const valid = (
+			node.childNodes.length === 1 &&
+			node.childNodes[0].nodeType === Node.TEXT_NODE
+		);
+
+		if (!valid) {
+			throw new Error(`This transition only works on elements with a single text node child`);
+		}
+
+		const text = node.textContent;
+		const duration = text.length / (speed * 0.01);
+
+		return {
+			duration,
+			tick: t => {
+				const i = Math.trunc(text.length * t);
+				node.textContent = text.slice(0, i);
+			}
+		};
+	}
 </script>
 <svelte:head>
 	<title>Portofolio | About</title>
@@ -12,47 +34,62 @@
 				<div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
 					<div class="lg:pl-20">
 						<div class="max-w-xs px-2.5 lg:max-w-none">
+							<Saos animation={'rotate-in-2-fwd-cw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'} once={true}>
 							<img
-								alt=""
+								alt="..."
 								loading="lazy"
 								width="800"
 								height="800"
 								decoding="async"
 								data-nimg="1"
-								class="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+								class="aspect-square rotate-3 rounded-2xl w-full h-full bg-zinc-100 object-cover dark:bg-zinc-800"
 								sizes="(min-width: 1024px) 32rem, 20rem"
 								src={aboutPicture}
 								style="color: transparent;"
 							/>
+						</Saos>
 						</div>
 					</div>
 					<div class="lg:order-first lg:row-span-2">
-						<h1
-							class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
-						>
-							I’m Irfan Ramadhan. Enthusiast Backend Developer.
+						<h1 class="text-4xl font-mono font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+							<p in:typewriter>
+								I’m Irfan Ramadhan. Enthusiast Backend Developer.
+							</p>
 						</h1>
 						<div class="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-							<p>
-								With an extensive skill set in programming, I possess a diverse range of technical abilities that allow me to navigate through the intricacies of software development. From backend development, where I architect the core functionality of applications, to fullstack development, where I can seamlessly bridge the gap between the server and the user interface, I am well-versed in multiple layers of the development stack.
-							</p>
-							<p>
-								What truly sets me apart is my unwavering passion for programming. It goes beyond the lines of code and extends into a genuine curiosity and excitement for the craft. I am constantly seeking out new challenges and opportunities to push the boundaries of what can be achieved through programming. The thrill of solving complex problems, optimizing performance, and creating elegant and efficient solutions is what drives me forward.
-							</p>
-							<p>
-								I believe that programming is not just about writing code; it is about finding innovative ways to leverage technology to improve people's lives. It's about transforming ideas into tangible digital experiences that make a meaningful impact. Whether it's developing a user-friendly e-commerce platform, designing a robust database system, or implementing cutting-edge technologies like machine learning, my passion lies in crafting solutions that are both functional and delightful.
-							</p>
-							<p>
-								To stay at the forefront of the ever-evolving programming landscape, I am committed to continuous learning and self-improvement. I actively explore new frameworks, programming languages, and tools, embracing them as opportunities to enhance my skills and expand my knowledge. This dedication to growth enables me to adapt quickly to emerging trends and deliver solutions that are not only current but also future-proof.
-							</p>
-							<p>
-								In summary, I am a skilled and passionate programmer who thrives on the challenges of software development. With a deep-rooted curiosity and a commitment to continuous improvement, I strive to create exceptional digital experiences that leave a lasting impression on users and drive positive change in the world.
-							</p>
-							<p>
-								In addition, it's worth mentioning that as a driven and ambitious individual, I am currently pursuing my college education, further honing my programming skills and knowledge in the field of information systems. Being a college student allows me to combine theoretical learning with practical application, ensuring that I stay up-to-date with the latest industry trends and best practices in programming.
-							</p>
+							<Saos animation={'fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both'} once={true}>
+								<p>
+									With an extensive skill set in programming, I possess a diverse range of technical abilities that allow me to navigate through the intricacies of software development. From backend development, where I architect the core functionality of applications, to fullstack development, where I can seamlessly bridge the gap between the server and the user interface, I am well-versed in multiple layers of the development stack.
+								</p>
+							</Saos>
+							<Saos animation={'fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both'} once={true}>
+								<p>
+									What truly sets me apart is my unwavering passion for programming. It goes beyond the lines of code and extends into a genuine curiosity and excitement for the craft. I am constantly seeking out new challenges and opportunities to push the boundaries of what can be achieved through programming. The thrill of solving complex problems, optimizing performance, and creating elegant and efficient solutions is what drives me forward.
+								</p>
+							</Saos>
+							<Saos animation={'fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both'} once={true}>
+								<p>
+									I believe that programming is not just about writing code; it is about finding innovative ways to leverage technology to improve people's lives. It's about transforming ideas into tangible digital experiences that make a meaningful impact. Whether it's developing a user-friendly e-commerce platform, designing a robust database system, or implementing cutting-edge technologies like machine learning, my passion lies in crafting solutions that are both functional and delightful.
+								</p>
+							</Saos>
+							<Saos animation={'fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both'} once={true}>
+								<p>
+									To stay at the forefront of the ever-evolving programming landscape, I am committed to continuous learning and self-improvement. I actively explore new frameworks, programming languages, and tools, embracing them as opportunities to enhance my skills and expand my knowledge. This dedication to growth enables me to adapt quickly to emerging trends and deliver solutions that are not only current but also future-proof.
+								</p>
+							</Saos>
+							<Saos animation={'fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both'} once={true}>
+								<p>
+									In summary, I am a skilled and passionate programmer who thrives on the challenges of software development. With a deep-rooted curiosity and a commitment to continuous improvement, I strive to create exceptional digital experiences that leave a lasting impression on users and drive positive change in the world.
+								</p>
+							</Saos>
+							<Saos animation={'fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both'} once={true}>
+								<p>
+									In addition, it's worth mentioning that as a driven and ambitious individual, I am currently pursuing my college education, further honing my programming skills and knowledge in the field of information systems. Being a college student allows me to combine theoretical learning with practical application, ensuring that I stay up-to-date with the latest industry trends and best practices in programming.
+								</p>
+							</Saos>
 						</div>
 					</div>
+					<Saos animation={'fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both'} once={true}>
 					<div class="lg:pl-20">
 						<div class="rounded-2xl border border-zinc-100 dark:border-zinc-700/40 p-6 mt-8">
 							<h2 class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -101,6 +138,7 @@
 							</ol>
 						</div>
 					</div>
+					</Saos>
 				</div>
 			</div>
 		</div>
