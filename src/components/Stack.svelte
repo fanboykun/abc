@@ -35,7 +35,7 @@
 				<div class="mt-8 sm:mt-8">
 					<ul class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
 						{#each stacks as stack, index (stack.id)}
-						<Saos animation={'flip-in-diag-2-br 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both'}>
+						<Saos animation={`flip-in-diag-2-br 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ${index * 0.2}s both`}>
 							<li class="group relative flex flex-col items-center" id="{index}">
 									<div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
 										<img

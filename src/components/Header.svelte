@@ -40,7 +40,7 @@
 					{#if place_socials}
 					<div class="mt-6 flex gap-6">
 						{#each socials as social, index (social.id)}
-						<Saos animation={'roll-in-blurred-left 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.2s both'} once={true}>
+						<Saos animation={`roll-in-blurred-left 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) ${index * 0.2}s both`} once={true}>
 							<a
 								class="group -m-1 p-1"
 								aria-label="Follow"
