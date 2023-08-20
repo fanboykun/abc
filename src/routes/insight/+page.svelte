@@ -59,6 +59,11 @@
 						<div class="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
 							<Saos animation={'fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both'} once={true}>
 								<p>
+									As i already finished my study, now i am officially have a bachelor degree in information system. <span class="text-zinc-800 dark:text-zinc-100 sm:text-2xl font-mono">Irfan Ramadhan, S.Kom</span>
+								</p>
+							</Saos>
+							<Saos animation={'fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both'} once={true}>
+								<p>
 									With an extensive skill set in programming, I possess a diverse range of technical abilities that allow me to navigate through the intricacies of software development. From backend development, where I architect the core functionality of applications, to fullstack development, where I can seamlessly bridge the gap between the server and the user interface, I am well-versed in multiple layers of the development stack.
 								</p>
 							</Saos>

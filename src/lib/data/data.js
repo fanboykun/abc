@@ -122,7 +122,7 @@ export const educations = [
         name: "College",
         place: "STMIK Triguna Dharma",
         start_date: "2018",
-        end_date: "Present",
+        end_date: "2023",
         description: "Bachelor Degree in Computer Science",
     },
     {
