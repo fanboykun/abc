@@ -6,13 +6,10 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let linkedin = socials.filter((item) => item.name == "Linkedin");
   let instagram = socials.filter((item) => item.name == "Instagram");
   let twitter = socials.filter((item) => item.name == "Twitter");
-  let { form } = $$props;
   let name = "";
   let email = "";
   let subject = "";
   let loading = [{ status: false, message: "" }];
-  if ($$props.form === void 0 && $$bindings.form && form !== void 0)
-    $$bindings.form(form);
   return `${$$result.head += `<!-- HEAD_svelte-1df0p49_START -->${$$result.title = `<title>Portofolio | Contact</title>`, ""}<!-- HEAD_svelte-1df0p49_END -->`, ""}
 <div class="sm:px-8 mt-16 sm:mt-18"><div class="mx-auto max-w-7xl lg:px-8"><div class="relative px-4 sm:px-8 lg:px-12"><div class="mx-auto max-w-2xl lg:max-w-5xl"><h1 class="text-4xl font-mono font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"><p>Get In Touch With Me, Discuss Anything.
 				   </p></h1>
@@ -26,7 +23,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       default: () => {
         return `<div class="lg:order-first lg:row-span-2"><div class="rounded-2xl border border-zinc-100 dark:border-zinc-700/40 p-6 mt-8"><h2 class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"><path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H7.5z" clip-rule="evenodd"></path></svg>
                                         <span class="ml-3">Send Message To Me</span></h2>
-							<ol class="mt-6 space-y-4"><li class="flex gap-4"><form action="" method="POST" class="flex flex-auto flex-wrap gap-x-2"><div class="relative z-0 w-full mb-6 group"><input type="text" name="name" id="name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer" placeholder=" " required${add_attribute("value", name, 0)}>
+							<ol class="mt-6 space-y-4"><li class="flex gap-4"><form method="POST" class="flex flex-auto flex-wrap gap-x-2"><div class="relative z-0 w-full mb-6 group"><input type="text" name="name" id="name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer" placeholder=" " required${add_attribute("value", name, 0)}>
 											<label for="name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus:dark:text-teal-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Your name, Please</label></div>
 										<div class="relative z-0 w-full mb-6 group"><input type="email" name="email" id="email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-teal-500 focus:outline-none focus:ring-0 focus:border-teal-600 peer" placeholder=" " required${add_attribute("value", email, 0)}>
 											<label for="email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus:dark:text-teal-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label></div>
