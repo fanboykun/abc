@@ -112,4 +112,19 @@
     opacity: 1;
   }
 }
+@keyframes -global-scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    filter: blur(50px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 </style>
