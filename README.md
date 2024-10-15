@@ -1,6 +1,6 @@
 # My Own Personal Website & Protofolio
 
-<p> This README includes Project Showcase in my Portofolio Website. </p>
+<p> This README includes my public Project Showcase in my Portofolio Website, some other projects or work that is private are not icluded here </p>
 <p> Project developed and created with SvelteKit and Tailwind Css. </p>
 
 ## Some Projects that i created or developed
