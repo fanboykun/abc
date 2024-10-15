@@ -7,6 +7,14 @@
 
 <ul>
 
+### Open Source Libraries and Public Templates
+
+<a href="https://github.com/fanboykun/ts-input-validator"> `Ts input validator (Input validation like laravel validator)`</a>
+
+<a href="https://github.com/fanboykun/my-sowon"> `Mysql query builder with Typescript`</a>
+
+<a href="https://github.com/fanboykun/sveltekit-breeze"> `Sveltekit Authentication Starterkit With Prisma, TailwindCss, Lucia Auth`</a>
+
 ### Fullstack Project
 
 > <a href="https://github.com/fanboykun/tembong">`Tembong (Dropshipping App using Laravel, Livewire, Alpine.js & Tailwind.css)`</a>
