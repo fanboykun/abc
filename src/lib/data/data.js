@@ -27,6 +27,20 @@ export const projects = [
         description: "These projects demonstrate my expertise in building robust and scalable APIs that adhere to RESTful principles, allowing seamless communication and data exchange between client applications and the server. Through these projects, I have implemented various API endpoints, enabling CRUD operations, data filtering, sorting, and pagination. Robust authentication mechanisms such as JWT (JSON Web Tokens) or Sanctum have been incorporated to ensure secure access control. Error handling, input validation, and response formatting have been meticulously implemented to provide a smooth and consistent API experience.",
         link: "https://github.com/fanboykun/personal-portofolio#restfull-api-project",
     },
+    {
+        id: 6,
+        type: "Open Source",
+        about: "Open Source Library and Public Template",
+        description: "These projects showcasing my skills and ability to solve common problem and serving it as an open source.",
+        link: "https://github.com/fanboykun/personal-portofolio?tab=readme-ov-file#open-source-libraries-and-public-templates",
+    },
+    {
+        id: 7,
+        type: "Learning",
+        about: "Learning Purpose Projects",
+        description: "These projects showcasing my skills and ability to learn new technologies",
+        link: "https://github.com/fanboykun/personal-portofolio?tab=readme-ov-file#learning-purpose-projects",
+    },
 ]
 
 export const stacks = [
